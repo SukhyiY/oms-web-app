@@ -1,0 +1,14 @@
+version: '3.5'
+services:
+  app:
+    build: .
+    image: oms_tomcat:latest
+    container_name: oms_tomcat
+    environment:
+      - DB_UURL=jdbc:mysql://10.26.34.95:3333/lv378oms
+      - DB_USER=root
+      - DB_PSWD=132465798
+    ports:
+      - "8085:8080"
+    restart: always
+
